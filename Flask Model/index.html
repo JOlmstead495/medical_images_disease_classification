@@ -1,0 +1,68 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Drusen Disease Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <style>
+    
+    
+    
+    </style>
+</head>
+
+<body align="center">
+<section>
+  <form action="/upload/" method="POST" enctype="multipart/form-data">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label class="header-header">Upload An Optical Image</label>
+            <div class="preview-zone hidden">
+              <div class="box box-solid">
+                <div class="box-header with-border">
+                  <div><b>Preview</b></div>
+                  <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-danger btn-xs remove-preview">
+                      <i class="fa fa-times"></i> Reset This Form
+                    </button>
+                  </div>
+                </div>
+                <div class="box-body"></div>
+              </div>
+            </div>
+            <div class="dropzone-wrapper">
+              <div class="dropzone-desc">
+                <i class="glyphicon glyphicon-download-alt"></i>
+                <p>Choose an image file or drag it here.</p>
+              </div>
+              <input type="file" name="eye_dis" class="dropzone">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <button type="submit" class="btn btn-primary pull-right">Upload</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</section>
+
+<script src="static/upload.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<br>
+{% if message1 %}
+<h2 class="header-header">{{message1}}</h2>
+<h3>There is a {{message2}}% probability that you {{message3}}</h3>
+{% endif %}
+
+
+</body>
+</html>
