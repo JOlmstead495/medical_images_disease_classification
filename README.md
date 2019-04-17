@@ -9,9 +9,9 @@ model. I graphed some of the results using Seaborn and Matplotlib. I obtained an
 
 ## Tools Used During Project
 
-Data Storage: AWS
-Image Processing: Mahotas and OpenCV
-Modeling: Sklearn
+Data Storage: AWS  
+Image Processing: Mahotas and OpenCV  
+Modeling: Sklearn  
 Graphing: Seaborn  
 
 ## Authors
